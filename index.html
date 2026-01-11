@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|| H4cKeD By Expl0it ||</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            background-image: url(http://img54.xooimage.com/files/f/7/2/kbk29185-227a592.gif);
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            overflow-x: hidden;
+            direction: rtl;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 15px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+            animation: glitch 1s infinite;
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 8px;
+            text-shadow: 0 0 10px currentColor;
+        }
+
+        .red { 
+            color: #ff0000; 
+            text-shadow: 0 0 20px #ff0000;
+        }
+        
+        .green { 
+            color: #00ff00; 
+            text-shadow: 0 0 20px #00ff00;
+        }
+        
+        .cyan { 
+            color: #00ffff; 
+            text-shadow: 0 0 20px #00ffff;
+        }
+
+        @keyframes glitch {
+            0%, 100% { 
+                text-shadow: 2px 2px #ff0000, -2px -2px #00ffff; 
+                transform: translate(0);
+            }
+            25% {
+                text-shadow: -2px -2px #ff0000, 2px 2px #00ffff;
+                transform: translate(-2px, 2px);
+            }
+            50% { 
+                text-shadow: 2px -2px #00ffff, -2px 2px #ff0000; 
+                transform: translate(2px, -2px);
+            }
+            75% {
+                text-shadow: -2px 2px #00ffff, 2px -2px #ff0000;
+                transform: translate(-2px, -2px);
+            }
+        }
+
+        .discord-link {
+            font-size: 1.3em;
+            color: #ff0000;
+            margin-bottom: 12px;
+            text-decoration: none;
+            animation: blink 1s infinite;
+            text-shadow: 0 0 15px #ff0000;
+            display: inline-block;
+            padding: 6px 15px;
+            border: 2px solid #ff0000;
+            transition: all 0.3s;
+        }
+
+        .discord-link:hover {
+            background: rgba(255, 0, 0, 0.2);
+            transform: scale(1.1);
+        }
+
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0.3; }
+        }
+
+        .for-group {
+            font-size: 1.1em;
+            color: #00ff00;
+            margin-bottom: 15px;
+            text-shadow: 0 0 15px #00ff00;
+        }
+
+        .status-box {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #0f0;
+            padding: 15px 20px;
+            margin: 12px 0;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 0 25px rgba(0, 255, 0, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 25px rgba(0, 255, 0, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(0, 255, 0, 0.8);
+            }
+        }
+
+        .status-line {
+            margin: 8px 0;
+            font-size: 0.9em;
+            padding: 3px 0;
+            border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+        }
+
+        .status-line:last-child {
+            border-bottom: none;
+        }
+
+        .video-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+            margin: 25px 0;
+        }
+
+        .video-wrapper {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #ff0000;
+            padding: 12px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+            transition: all 0.3s;
+        }
+
+        .video-wrapper:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 35px rgba(255, 0, 0, 0.9);
+        }
+
+        .video-label {
+            color: #00ff00;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 0 0 10px #00ff00;
+        }
+
+        video {
+            width: 100%;
+            height: 200px;
+            border: 2px solid #00ffff;
+            box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+            background: #000;
+        }
+
+        .main-video-wrapper {
+            max-width: 450px;
+            width: 100%;
+            margin: 15px auto;
+            background: rgba(0, 0, 0, 0.8);
+            border: 3px solid #0f0;
+            padding: 0;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.6);
+        }
+
+        .main-video-wrapper video {
+            width: 100%;
+            height: 250px;
+            border: none;
+            display: block;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes typing {
+            from { 
+                width: 0; 
+                opacity: 0;
+            }
+            to { 
+                width: 100%; 
+                opacity: 1;
+            }
+        }
+
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 3s steps(40, end);
+        }
+
+        .defaced-message {
+            font-size: 1.6em;
+            color: #ff0000;
+            text-align: center;
+            margin-top: 20px;
+            text-shadow: 0 0 20px #ff0000;
+            animation: blink 1.5s infinite;
+            font-weight: bold;
+        }
+
+        .scan-line {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff00, transparent);
+            animation: scan 4s linear infinite;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        @keyframes scan {
+            0% {
+                top: 0;
+            }
+            100% {
+                top: 100%;
+            }
+        }
+
+        .terminal-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 18px;
+            background: #00ff00;
+            margin-left: 4px;
+            animation: cursor-blink 0.8s infinite;
+        }
+
+        @keyframes cursor-blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        .skull-ascii {
+            font-size: 0.7em;
+            color: #ff0000;
+            text-align: center;
+            margin: 20px 0;
+            white-space: pre;
+            font-family: monospace;
+            text-shadow: 0 0 10px #ff0000;
+            line-height: 1.2;
+        }
+
+        .glitch-text {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch-text::before {
+            left: 2px;
+            text-shadow: -2px 0 #ff0000;
+            clip: rect(24px, 550px, 90px, 0);
+            animation: glitch-anim-2 3s infinite linear alternate-reverse;
+        }
+
+        .glitch-text::after {
+            left: -2px;
+            text-shadow: -2px 0 #00ffff;
+            clip: rect(85px, 550px, 140px, 0);
+            animation: glitch-anim 2.5s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% { clip: rect(61px, 9999px, 87px, 0); }
+            10% { clip: rect(87px, 9999px, 24px, 0); }
+            20% { clip: rect(37px, 9999px, 5px, 0); }
+            30% { clip: rect(68px, 9999px, 80px, 0); }
+            40% { clip: rect(90px, 9999px, 66px, 0); }
+            50% { clip: rect(29px, 9999px, 95px, 0); }
+            60% { clip: rect(11px, 9999px, 72px, 0); }
+            70% { clip: rect(46px, 9999px, 58px, 0); }
+            80% { clip: rect(65px, 9999px, 27px, 0); }
+            90% { clip: rect(92px, 9999px, 12px, 0); }
+            100% { clip: rect(32px, 9999px, 63px, 0); }
+        }
+
+        @keyframes glitch-anim-2 {
+            0% { clip: rect(44px, 9999px, 56px, 0); }
+            10% { clip: rect(23px, 9999px, 99px, 0); }
+            20% { clip: rect(6px, 9999px, 82px, 0); }
+            30% { clip: rect(51px, 9999px, 71px, 0); }
+            40% { clip: rect(77px, 9999px, 25px, 0); }
+            50% { clip: rect(9px, 9999px, 101px, 0); }
+            60% { clip: rect(55px, 9999px, 17px, 0); }
+            70% { clip: rect(94px, 9999px, 33px, 0); }
+            80% { clip: rect(21px, 9999px, 52px, 0); }
+            90% { clip: rect(45px, 9999px, 96px, 0); }
+            100% { clip: rect(81px, 9999px, 38px, 0); }
+        }
+
+        .binary-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+            opacity: 0.1;
+        }
+
+        .binary-column {
+            position: absolute;
+            top: -100%;
+            font-family: monospace;
+            font-size: 14px;
+            color: #00ff00;
+            animation: binary-fall linear infinite;
+        }
+
+        @keyframes binary-fall {
+            0% { top: -100%; }
+            100% { top: 100%; }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .discord-link {
+                font-size: 1.1em;
+            }
+            
+            .video-section {
+                grid-template-columns: 1fr;
+            }
+            
+            video {
+                height: 180px;
+            }
+            
+            .status-box {
+                padding: 12px 15px;
+            }
+            
+            .status-line {
+                font-size: 0.85em;
+            }
+        }
+
+        .footer-message {
+            margin: 30px 0 20px 0;
+            text-align: center;
+            color: #00ff00;
+            font-size: 1.1em;
+            text-shadow: 0 0 10px #00ff00;
+        }
+
+        .hack-counter {
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid #00ffff;
+            padding: 15px;
+            margin: 15px 0;
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+        }
+
+        .hack-counter h3 {
+            color: #00ffff;
+            font-size: 1.3em;
+            margin-bottom: 8px;
+            text-shadow: 0 0 15px #00ffff;
+        }
+
+        .counter-number {
+            color: #ff0000;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 0 0 20px #ff0000;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="scan-line"></div>
+    <div class="binary-bg" id="binaryBg"></div>
+    
+    <div class="container" id="mainContent">
+        <a href="#" class="discord-link" id="discordLink">Discord.gg/122x</a>
+        
+        <p class="for-group">For : 122 Group</p>
+        
+        <div class="header">
+            <h1 class="glitch-text" data-text="H4CK3D BY Expl0it">
+                <span class="red">H</span><span class="cyan">a</span><span class="red">CK</span><span class="cyan">3</span><span class="red">D </span>
+                <span class="green">BY </span><span class="red">Expl0it</span>
+            </h1>
+        </div>
+
+        <div class="main-video-wrapper">
+            <video id="mainVideo" autoplay loop muted playsinline>
+                <source src="aa2.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="status-box">
+            <div class="status-line typing">
+                <span class="green">Bruting Passwords</span> = <span class="cyan">Has been bruted</span><span class="terminal-cursor"></span>
+            </div>
+            <div class="status-line">
+                <span class="green">Server</span> = <span class="cyan">Defaced</span>
+            </div>
+            <div class="status-line">
+                <span class="green">Password</span> = <span class="cyan">Just Owned</span>
+            </div>
+            <div class="status-line">
+                <span class="green">Server Status</span> = <span class="red">Offline</span>
+            </div>
+            <div class="status-line">
+                <span class="green">Server Security</span> = <span class="cyan">Low</span>
+            </div>
+            <div class="status-line">
+                <span class="green">Hacker IP</span> = <span class="cyan">127.0.0.1</span>
+            </div>
+            <div class="status-line">
+                <span class="green">Attack Vector</span> = <span class="cyan">Go Fuck Your Self </span>
+            </div>
+            <div class="status-line">
+                <span class="green">Backdoor Status</span> = <span class="red">Active</span>
+            </div>
+            <div class="status-line">
+                <span class="green">Root Access</span> = <span class="red">Granted</span>
+            </div>
+            <div class="status-line">
+                <span class="green">JUST OWNED by</span> = <span class="cyan">| Expl0it AL-QaHtAnI |</span>
+            </div>
+        </div>
+
+        <div class="hack-counter">
+            <h3>SYSTEMS HACKED</h3>
+            <div class="counter-number" id="hackCounter">0</div>
+        </div>
+
+
+        <div class="defaced-message">
+            قلت لك يا ابو شرارة لا تستلكع وافصلهم ورح نخليك 
+        </div>
+
+        <div class="video-section">
+            <div class="video-wrapper">
+                <div class="video-label">ابو شخاخه :</div>
+                <video id="video1" autoplay loop muted playsinline>
+                    <source src="aa1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="video-wrapper">
+                <div class="video-label">ابو شخاخه :</div>
+                <video id="video2" autoplay loop muted playsinline>
+                    <source src="aa2.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="video-wrapper">
+                <div class="video-label">ابو شخاخه :</div>
+                <video id="video3" autoplay loop muted playsinline>
+                    <source src="aa3.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="footer-message">
+            <p>- System Breached Successfully -</p>
+            <p style="color: #ff0000; margin-top: 8px;">Security Level: CRITICAL</p>
+        </div>
+    </div>
+
+    <audio id="bgAudio" loop>
+        <source src="aa.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const bgAudio = document.getElementById('bgAudio');
+        const discordLink = document.getElementById('discordLink');
+        const mainVideo = document.getElementById('mainVideo');
+        const videos = [
+            document.getElementById('video1'),
+            document.getElementById('video2'),
+            document.getElementById('video3')
+        ];
+        const hackCounter = document.getElementById('hackCounter');
+
+        let hasInteracted = false;
+        let counterValue = 0;
+
+        function openDiscord() {
+            window.open('https://discord.gg/122', '_blank');
+        }
+
+        function handleFirstInteraction() {
+            if (hasInteracted) return;
+            hasInteracted = true;
+            
+            bgAudio.play().catch(e => console.log('Audio play failed:', e));
+            
+            openDiscord();
+        }
+
+        mainVideo.muted = true;
+        mainVideo.play().catch(e => console.log('Main video autoplay failed:', e));
+
+        videos.forEach(video => {
+            video.muted = true;
+            video.play().catch(e => console.log('Video autoplay failed:', e));
+        });
+
+        document.addEventListener('click', handleFirstInteraction);
+        document.addEventListener('keydown', handleFirstInteraction);
+        document.addEventListener('touchstart', handleFirstInteraction);
+
+        discordLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (!hasInteracted) {
+                handleFirstInteraction();
+            } else {
+                openDiscord();
+            }
+        });
+
+        function animateCounter() {
+            if (counterValue < 9999) {
+                counterValue += Math.floor(Math.random() * 100) + 1;
+                if (counterValue > 9999) counterValue = 9999;
+                hackCounter.textContent = counterValue.toString().padStart(4, '0');
+                setTimeout(animateCounter, Math.random() * 200 + 100);
+            }
+        }
+
+        animateCounter();
+
+        function createBinaryRain() {
+            const binaryBg = document.getElementById('binaryBg');
+            const columns = Math.floor(window.innerWidth / 20);
+            
+            for (let i = 0; i < columns; i++) {
+                const column = document.createElement('div');
+                column.className = 'binary-column';
+                column.style.left = (i * 20) + 'px';
+                column.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                column.style.animationDelay = (Math.random() * 5) + 's';
+                
+                let binaryText = '';
+                for (let j = 0; j < 50; j++) {
+                    binaryText += Math.random() > 0.5 ? '1' : '0';
+                    binaryText += '<br>';
+                }
+                column.innerHTML = binaryText;
+                
+                binaryBg.appendChild(column);
+            }
+        }
+
+        createBinaryRain();
+
+        const glitchTexts = document.querySelectorAll('.glitch-text');
+        glitchTexts.forEach(text => {
+            setInterval(() => {
+                text.style.transform = `translate(${Math.random() * 4 - 2}px, ${Math.random() * 4 - 2}px)`;
+                setTimeout(() => {
+                    text.style.transform = 'translate(0, 0)';
+                }, 50);
+            }, 3000);
+        });
+
+        window.addEventListener('resize', () => {
+            const binaryBg = document.getElementById('binaryBg');
+            binaryBg.innerHTML = '';
+            createBinaryRain();
+        });
+
+        setInterval(() => {
+            const statusLines = document.querySelectorAll('.status-line');
+            const randomLine = statusLines[Math.floor(Math.random() * statusLines.length)];
+            randomLine.style.color = '#ff0000';
+            setTimeout(() => {
+                randomLine.style.color = '';
+            }, 500);
+        }, 2000);
+
+        const terminalCursor = document.querySelector('.terminal-cursor');
+        if (terminalCursor) {
+            setInterval(() => {
+                terminalCursor.style.opacity = terminalCursor.style.opacity === '0' ? '1' : '0';
+            }, 500);
+        }
+    </script>
+</body>
+</html>
